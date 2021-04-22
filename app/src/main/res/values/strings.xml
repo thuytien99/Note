@@ -1,3 +1,38 @@
 <resources>
-    <string name="app_name">CCPM</string>
+    <string name="app_name">NoteManagementSystem</string>
+    <string name="txtUsernameLogin">Username</string>
+    <string name="hintEdtEmail">abc@gmail.com</string>
+    <string name="txtPasswordLogin">Password</string>
+    <string name="hintEdtPassword">••••••••••••••</string>
+    <string name="cb_remember">Remember me</string>
+    <string name="btn_SignUp">Don\'t have an account?</string>
+    <string name="btn_login">Login</string>
+    <string name="hintEdtusername">acb</string>
+    <string name="txtEmail">Email address</string>
+    <string name="toolbar_register">Register</string>
+    <string name="nav_page_home">Home</string>
+    <string name="nav_page_category">Category</string>
+    <string name="nav_page_piority">Priority</string>
+    <string name="nav_page_status">Status</string>
+    <string name="nav_page_note">Note</string>
+    <string name="nav_account_menu">Account</string>
+    <string name="nav_page_edtit_profile">Edit profile</string>
+    <string name="nav_page_change_password">Change password</string>
+    <string name="nav_page_logout">Log out</string>
+    <string name="navigation_drawer_opne">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Closer navigation drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_add">Add</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="hint_name_new_category">Name category</string>
+    <string name="txtNameCategory">Name of category :</string>
+    <string name="txt_show_name_category">Name of category</string>
+    <string name="txt_date_category">Created date :</string>
+    <string name="txt_show_date_category">Date</string>
+    <string name="txt_name_piority">Name of piority :</string>
+    <string name="txt_show_name_piority">Name of piority</string>
+    <string name="hint_name_new_status">Name of status</string>
+    <string name="txt_name_status">Name of status</string>
 </resources>
