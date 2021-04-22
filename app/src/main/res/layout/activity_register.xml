@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimaryDark">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:text="@string/toolbar_register"
+            android:textStyle="italic"
+            android:textSize="25sp"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_gravity="center" />
+
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtEmailRegister"
+            android:text="@string/txtEmail"
+            android:textColor="#232222"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_above="@+id/edtEmailRegister"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/edtEmailRegister"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="3dp"
+            android:hint="@string/hintEdtEmail"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:maxLength="30"
+            android:textSize="16sp"
+            android:layout_marginBottom="15dp"
+            android:layout_above="@id/txtUsernameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="" />
+
+        <TextView
+            android:id="@+id/txtUsernameRegister"
+            android:text="@string/txtUsernameLogin"
+            android:textColor="#232222"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_above="@+id/edtUsernameRegister"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/edtUsernameRegister"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="3dp"
+            android:hint="@string/hintEdtusername"
+            android:inputType="textCapCharacters"
+            android:maxLines="1"
+            android:maxLength="30"
+            android:textSize="16sp"
+            android:layout_centerInParent="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="" />
+        <TextView
+            android:id="@+id/txtPasswordRegister"
+            android:text="@string/txtPasswordLogin"
+            android:textColor="#232222"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/edtUsernameRegister"
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/edtPasswordRegister"
+            android:layout_marginHorizontal="18dp"
+            android:layout_marginTop="3dp"
+            android:hint="@string/hintEdtPassword"
+            android:inputType="textPassword"
+            android:layout_below="@id/txtPasswordRegister"
+            android:maxLines="1"
+            android:maxLength="30"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="" />
+
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:text="@string/toolbar_register"
+            android:textColor="#FFF"
+            android:layout_marginHorizontal="25dp"
+            android:layout_below="@+id/edtPasswordRegister"
+            android:layout_marginTop="70dp"
+            android:background="@drawable/bg_button_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+</LinearLayout>
