@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/page_home"
+            android:enabled="true"
+            android:icon="@drawable/ic_home"
+            android:title="@string/nav_page_home" />
+        <item
+            android:id="@+id/page_category"
+            android:enabled="true"
+            android:icon="@drawable/ic_category"
+            android:title="@string/nav_page_category" />
+        <item
+            android:id="@+id/page_piority"
+            android:enabled="true"
+            android:icon="@drawable/ic_priority"
+            android:title="@string/nav_page_piority" />
+        <item
+            android:id="@+id/page_status"
+            android:enabled="true"
+            android:icon="@drawable/ic_status"
+            android:title="@string/nav_page_status" />
+        <item
+            android:id="@+id/page_note"
+            android:enabled="true"
+            android:icon="@drawable/ic_note"
+            android:title="@string/nav_page_note" />
+    </group>
+
+    <item android:title="@string/nav_account_menu">
+        <menu>
+            <item
+                android:id="@+id/page_edit_profile"
+                android:enabled="true"
+                android:icon="@drawable/ic_editprofile"
+                android:title="@string/nav_page_edtit_profile" />
+            <item
+                android:id="@+id/page_change_password"
+                android:enabled="true"
+                android:icon="@drawable/ic_password"
+                android:title="@string/nav_page_change_password" />
+            <item
+                android:id="@+id/page_logout"
+                android:enabled="true"
+                android:icon="@drawable/ic_log_out"
+                android:title="@string/nav_page_logout" />
+        </menu>
+    </item>
+
+
+</menu>
