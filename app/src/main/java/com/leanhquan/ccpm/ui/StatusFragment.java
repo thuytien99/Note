@@ -84,25 +84,31 @@ public class StatusFragment extends Fragment {
     @Override
     public void onResume() {
         super.onResume();
-        if (adapterStatuslist != null) {adapterStatuslist.startListening();}
+        if (adapterStatuslist != null) {
+            adapterStatuslist.startListening();
+        }
     }
 
     @Override
     public void onStart() {
         super.onStart();
-        if (adapterStatuslist != null) {adapterStatuslist.startListening();}
+        if (adapterStatuslist != null) {
+            adapterStatuslist.startListening();
+        }
     }
 
     @Override
     public void onStop() {
         super.onStop();
-        if (adapterStatuslist != null) {adapterStatuslist.stopListening();}
+        if (adapterStatuslist != null) {
+            adapterStatuslist.stopListening();
+        }
     }
 
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
-        if (item.getTitle().equals(Common.UPDATE)){
-            showDialogUpdateStatus(adapterStatuslist.getRef(item.getOrder()).getKey(),adapterStatuslist.getItem(item.getOrder()));
+        if (item.getTitle().equals(Common.UPDATE)) {
+            showDialogUpdateStatus(adapterStatuslist.getRef(item.getOrder()).getKey(), adapterStatuslist.getItem(item.getOrder()));
         } else if (item.getTitle().equals(Common.DELETE)) {
             showDialogDeleteStatus(adapterStatuslist.getRef(item.getOrder()).getKey());
         }
@@ -117,7 +123,7 @@ public class StatusFragment extends Fragment {
         final AlertDialog optionDialog = new AlertDialog.Builder(getActivity()).create();
         optionDialog.setTitle("edit status");
         LayoutInflater inflater = LayoutInflater.from(getActivity());
-        View addMenuLayout = inflater.inflate(R.layout.layout_create_new_status,null, false);
+        View addMenuLayout = inflater.inflate(R.layout.layout_create_new_status, null, false);
         edtNameNewStatus = addMenuLayout.findViewById(R.id.edtNamenewStatus);
         btnAdd = addMenuLayout.findViewById(R.id.btnAddnewStatus);
         btnCancel = addMenuLayout.findViewById(R.id.btnCancelAddStatus);
@@ -138,11 +144,11 @@ public class StatusFragment extends Fragment {
 
                 final String newPiorityUpdate = edtNameNewStatus.getText().toString().trim();
 
-                if(!newPiorityUpdate.isEmpty()){
+                if (!newPiorityUpdate.isEmpty()) {
                     item.setName(newPiorityUpdate);
                     status.child(key).setValue(item);
                     progressDialog.dismiss();
-                    Toast.makeText(getActivity(), "Update "+newPiorityUpdate+" successfuly", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getActivity(), "Update " + newPiorityUpdate + " successfuly", Toast.LENGTH_SHORT).show();
                     optionDialog.dismiss();
                 } else {
                     progressDialog.dismiss();
@@ -189,7 +195,7 @@ public class StatusFragment extends Fragment {
         optionDialog.setTitle("Add new status");
         optionDialog.setMessage("Status form");
         LayoutInflater inflater = LayoutInflater.from(getActivity());
-        View addStatus = inflater.inflate(R.layout.layout_create_new_status,null, false);
+        View addStatus = inflater.inflate(R.layout.layout_create_new_status, null, false);
         edtNameNewStatus = addStatus.findViewById(R.id.edtNamenewStatus);
         btnAdd = addStatus.findViewById(R.id.btnAddnewStatus);
         btnCancel = addStatus.findViewById(R.id.btnCancelAddStatus);
@@ -208,7 +214,7 @@ public class StatusFragment extends Fragment {
                 final String newName = edtNameNewStatus.getText().toString().trim();
                 final String currentDateTimeString = java.text.DateFormat.getDateTimeInstance().format(new Date()).trim();
 
-                if(!newName.isEmpty()){
+                if (!newName.isEmpty()) {
                     newStatus = new Status(newName, currentDateTimeString);
                     status.push().setValue(newStatus);
                     progressDialog.dismiss();
